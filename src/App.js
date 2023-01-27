@@ -13,6 +13,7 @@ function App() {
           <Navigate />
         </div>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="about_me" element={<AboutMe />} />
           <Route path="contact_us" element={<ConstactUs />} />

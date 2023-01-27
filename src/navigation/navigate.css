@@ -6,12 +6,24 @@
   background-color: black;
   height: 80px;
 }
-.navigate > nav > ul {
+
+.navigate > nav {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 500px) {
+  .navigate > nav {
+    border: 1px solid white;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .li {
+  display: flex;
+  justify-content: center;
   margin: 0px 10px;
   height: 20px;
   text-decoration: none;
@@ -21,26 +33,49 @@
   font-weight: bold;
   cursor: pointer;
 }
-.navigate > h1 {
-  color: white;
-  cursor: pointer;
+
+.top > h3 {
+  display: none;
 }
 
 .li:hover {
   color: aqua;
 }
+.logo {
+  cursor: pointer;
+  color: white;
+}
+
 @media (max-width: 600px) {
   .navigate {
     display: flex;
     flex-direction: column;
     height: auto;
   }
-  .navigate > h1 {
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+  .top > h3 {
+    display: block;
+    color: white;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+  }
+  .top > h1 {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 1px solid white;
+  }
+
+  #hidden {
+    display: none;
   }
   .navigate > nav {
     width: 100%;
@@ -48,17 +83,10 @@
     justify-content: space-between;
     align-items: center;
   }
-  .navigate > nav > ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
   .li {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 10px 0px;
